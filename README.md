@@ -3,7 +3,7 @@ TCC  - A gamificação como estratégia para o ensino de matemática básica par
 
 ## README.md for TCC-LaTeX Repository
 
-This repository contains the LaTeX template and source files for Cristiano Filho's TCC ( Trabalho de Conclusão de Curso - Completion of Course Work).
+This repository contains the LaTeX template and source files TCC ( Trabalho de Conclusão de Curso - Completion of Course Work).
 
 **Features:**
 
