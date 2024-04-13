@@ -1,0 +1,175 @@
+\documentclass[12pt, openany, oneside, a4paper, english, brazil]{abntex2}   % Padrão Abntex2
+
+\input{style/packages.tex} % resto dos pacotes Latex
+%\usepackage[english]{style/UCSAL-Template} % personalização da ABNTEX2 para escrita em inglês
+\usepackage[portuguese]{style/ucsal} % personalização da ABNTEX2 para escrita em português
+\usepackage{longtable}
+\usepackage{blindtext}
+\DisemulatePackage{setspace}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+
+
+
+%inserindo apenas uma página
+
+%---------------------------------------------------------------
+%--------- DADOS BÁSICOS DO TRABALHO (Preencher todos) ---------
+%---------------------------------------------------------------
+
+
+\titulo{Ensino de matemática básica: Uma abordagem usando elementos de gamificação com estratégia educacional para crianças com síndrome de down
+}   % Título do Trabalho em Português
+
+\tituloingles{Teaching basic mathematics: An approach using gamification elements with an educational strategy for children with down syndrome}   % Título do Trabalho em Inglês
+
+\palavraschave{1. Gamificação.
+2. Educação Matemática.
+3. Crianças com Síndrome de Down.
+4. Aplicativo educacional.}  % 5 palavras-chave
+
+\keywords{1. Gamification.
+2. Mathematics Education.
+3. Children with Down Syndrome.
+4. Educational App.}   % 5 palavras-chave para resumo em inglês
+
+\DEELautor{ Cristiano Filho\\Enzo Santana \\Jamile Conceição\\ Lucas Augusto\\ Vinicius Candeias\\}{} % Alunos autores do trabalho
+
+
+
+\curso{Bacharelado em Engenharia de Software}												
+\orientador{Flávio Dusse}  % Professor Orientador membro da banca 
+
+\membrob{Prof. Me. Segundo professor}   % Professor membro da banca 
+\membroc{Prof. Me. Terceiro professor}   % Professor membro da banca
+
+\local{Salvador}   % Cidade da instituição
+\data{2024}        % Ano de realização
+
+%--------------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+\onehalfspacing
+
+% Seleção automática do idioma, não alterar
+\ifx\isenglish\undefined
+    \selectlanguage{brazil}
+\else
+    \selectlanguage{english}
+\fi
+
+% Texto da Dedicatória (OBS: dedicatória é opcional)
+% Caso não queira inserir, deixe em branco ( \dedicatoria{} )
+\DEELdedicatoria{Dedico este trabalho a todos aqueles.... \\}  
+    
+% Texto dos Agradecimentos (OBS: Agradecimentos é opcional)
+% Caso não queira inserir, deixe em branco ( \agradecimentos{} )
+\DEELagradecimentos{Eu Cristiano agradeço primeiramente a Jeová Deus e a minha família que sempre me apoiou nessa trajetória com todas as adversidades.} 
+
+                       
+% Texto da Epígrafe (OBS: Epígrafe é opcional)
+% Caso não queira inserir, deixe em branco ( \epigrafe{} )
+\DEELepigrafe{\textit{"A alegria está na luta, na tentativa, no sofrimento envolvido e não na vitória propriamente dita."} \\ (Mahatma Gandhi 
+)} 
+    
+
+% Texto do Resumo (OBS: Resumo é Obrigatório)
+\DEELresumo{
+Este trabalho de conclusão de curso tem como objetivo o desenvolvimento de um aplicativo gamificado destinado ao ensino de matemática básica para crianças com Síndrome de Down, com idades entre sete e quinze anos. O aplicativo contará com sessões interativas, desafios cativantes, recompensas motivadoras e feedback imediato, todos projetados para enriquecer a experiência de aprendizado dessas crianças. O diferencial deste projeto é a incorporação de uma interação por voz, permitindo que as crianças respondam às perguntas usando sua própria voz. Essa funcionalidade não apenas melhora as habilidades matemáticas, mas também desempenha um papel crucial no desenvolvimento da linguagem e da comunicação das crianças. Essas melhorias na comunicação têm o potencial de transformar significativamente a vida cotidiana dessas crianças, aumentando sua independência e confiança. Este projeto visa criar uma ferramenta educacional inclusiva e estimulante, que não apenas promova o aprendizado da matemática, mas também proporciona uma melhora na dicção e portanto na interação social das crianças com Síndrome de Down.} 
+     
+% Texto do Abstract (OBS: Abstract é Obrigatório)
+\DEELabstract{
+This undergraduate thesis aims to develop a gamified application designed for teaching basic mathematics to children with Down syndrome, aged between seven and fifteen years old. The application will feature interactive sessions, engaging challenges, motivating rewards, and immediate feedback, all designed to enrich the learning experience for these children. The unique aspect of this project is the incorporation of voice interaction, allowing children to respond to questions using their own voices. This functionality not only enhances mathematical skills but also plays a crucial role in language and speech development for these children. These improvements in communication have the potential to significantly transform the daily lives of these children, increasing their independence and confidence. This project aims to create an inclusive and stimulating educational tool that not only promotes mathematics learning but also provides valuable benefits for the communication and social interaction of children with Down syndrome.} 
+    
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Elementos Pré-Textuais%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ElementosPreTextuais
+% Insere todos os elementos Pré-Textuais listados (capa, folha de rosto, ...)
+    % capa                   % Obrigatório
+    % folhaderosto           % Obrigatório
+    % folhaaprovacao         % Obrigatório
+	% dedicatoria            % Opcional
+	% agradecimentos         % Opcional
+    % epigrafe               % Opcional
+    % resumo                 % Obrigatório
+    % abstract               % Obrigatório
+
+%\newpage
+%--------Lista de figuras--------
+\ListaDeFiguras 
+%--------Lista de tabelas--------
+\ListaDeTabelas 
+%--------Lista de Siglas e Abreviaturas--------
+\include{list_siglas}   
+%--------Lista de Simbolos e Notação--------
+%\include{list_simbolos} 
+%--------Sumário-------
+\Sumario
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%Elementos Textuais%%
+%%%%%%%%%%%%%%%%%%%%%%
+\textual 
+\include{capitulos/1_introducao} % Texto do cap1.tex
+\include{capitulos/2_revisaoBibliografica} % Texto do cap2.tex
+\include{capitulos/3_metodologia} % Texto do cap3.tex
+\include{capitulos/4_desenvolvimento do Aplicativo}  % Texto do cap4.tex
+\include{capitulos/5_resultados} % Texto do cap5.tex
+\include{capitulos/6_conclusoes} % Texto do cap6.tex
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Elementos Pós-Textuais%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--------Bibliografia--------
+\Bibliografia{referenciasbibliograficas} % arquivo bibtex com as referências (referenciasbibliograficas.bib)
+
+\cite{furlan2016desenvolvimento}
+
+%%--------Apêndice--------
+%% Descomente caso exista a necessidade da inclusão de apêndices
+%\apendice % Comando que inclui os apêndices
+%\include{7_Apendice/apendice_1}   % Arquivo apendice_1.tex
+%\include{7_Apendice/apendice_2}   % Arquivo apendice_2.tex
+%%---------------------------------------------------------------
+
+%%--------Anexos-------------------------------------------------
+%% Descomente caso exista a necessidade da inclusão de anexos
+%\anexo % Comando que inclui os anexos (outros autores)
+%\include{8_Anexos/anexo_1}  % Arquivo anexo_1.tex
+%\include{8_Anexos/anexo_2}  % Arquivo anexo_2.tex
+%%---------------------------------------------------------------
+\appendix
+
+
+\chapter{Apêndice}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figuras/T21.png}
+  \caption{Prototipação de telas: Autoral desenvolvida pela equipe T21, 2023.}
+  \label{fig:nome-da-imagem}
+\end{figure}
+
+\begin{center}
+    \includegraphics[width=\linewidth]{figuras/UseCase_TCC-1.png}
+    \captionof{figure}{Diagrama de caso de uso - Requisitos Funcionais: Autoral desenvolvida pela equipe, 2023.}
+    \label{fig:nome-da-imagem}
+\end{center}
+
+
+\end{document}
