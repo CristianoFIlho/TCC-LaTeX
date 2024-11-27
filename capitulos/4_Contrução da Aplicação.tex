@@ -4,13 +4,27 @@
 
 \subsection{Matrizes curriculares}
 
+A análise das matrizes curriculares do Ensino Fundamental I, especificamente para o 4º ano na disciplina de Matemática, é fundamental para identificar os conteúdos essenciais e as lacunas existentes no ensino atual. Este estudo comparativo entre o conteúdo programático do Colégio Salesiano do Salvador e o Referencial Curricular Municipal de Salvador, conforme apresentado posteriormente no capitulo de resultados, permitiu compreender as diferenças significativas em suas abordagens e detalhamentos.
 
+Enquanto o Colégio Salesiano adota uma estrutura mais detalhada e segmentada por trimestres, o Referencial Municipal apresenta uma abordagem integrada e contínua. Segundo \cite{mesquita2023gamificacao}, a falta de uniformidade nos conteúdos pode dificultar a consolidação do aprendizado, evidenciando a necessidade de ferramentas que alinhem essas discrepâncias e ofereçam uma educação matemática mais consistente.
 
-\textbf{Comparação e extração de assuntos em comum}
+\subsection{Comparação e extração de assuntos em comum}
 
-\textbf{Classificação por grau de relevância}
+A comparação entre as matrizes curriculares permitiu extrair oito unidades temáticas principais que são comuns e essenciais para o ensino de matemática no 4º ano: operações básicas (adição, subtração, multiplicação e divisão), frações, álgebra, geometria, grandezas e medidas, probabilidade e estatística, educação financeira e algarismos romanos. Detalhes sobre essas unidades podem ser encontrados em \textit{capitulos/4\_Contrução da Aplicação.tex}.
 
-\textbf{Validação com professores do ensino fundamental I}
+Essa extração foi fundamental para garantir que o aplicativo aborde os conteúdos mais relevantes e que estejam em consonância com as expectativas educacionais, proporcionando uma base sólida para os alunos avançarem em tópicos mais complexos no futuro.
+
+\subsection{Classificação por grau de relevância}
+
+Os conteúdos selecionados foram classificados com base em sua relevância para o desenvolvimento das competências matemáticas dos alunos. Priorizaram-se temas fundamentais, como as operações básicas e a resolução de problemas, essenciais para o entendimento de conceitos matemáticos mais avançados.
+
+Conforme evidenciado por \cite{mesquita2023gamificacao}, essa classificação permite uma progressão natural do aprendizado, facilitando a assimilação dos conteúdos e mantendo o aluno motivado através de desafios adequados ao seu nível de conhecimento.
+
+\subsection{Validação com professores do ensino fundamental I}
+
+A validação dos conteúdos e abordagens propostas foi realizada com a participação ativa de professores do Ensino Fundamental I. Como documentado em nos resultados, foram aplicados questionários e realizadas entrevistas para avaliar aspectos como usabilidade do aplicativo, eficácia pedagógica e potencial de engajamento dos alunos.
+
+Essa etapa foi crucial para refinar o aplicativo, garantindo que ele atenda às necessidades reais do ambiente escolar e esteja alinhado com as práticas pedagógicas atuais. A colaboração com os educadores não apenas fortaleceu a relevância do estudo, mas também destacou a contribuição original deste trabalho ao integrar teoria e prática na elaboração de uma solução inovadora para o ensino da matemática básica.
 
 \begin{longtable}{|m{1.5cm}|m{3.5cm}|m{4.5cm}|m{5cm}|}
 \hline
@@ -151,10 +165,10 @@ Duolingo é uma plataforma de aprendizado de idiomas amplamente popular, acessí
     \footnote{\url{https://play.google.com/store/apps/details?id=com.duolingo&hl=pt_BR}}
 \end{enumerate}
    
-    \end{enumerate}
+
 
     
-    \item \textbf{Khan Academy}
+
 
     \begin{itemize}
     \item \textbf{Khan Academy}
@@ -330,7 +344,7 @@ Duolingo é uma plataforma de aprendizado de idiomas amplamente popular, acessí
 \end{enumerate}
 
 
-    \end{itemize}
+\end{itemize}
  
 
 
@@ -668,18 +682,46 @@ Já os requisitos não funcionais (RNF) estabelecem atributos de qualidade e res
     \end{itemize}
 
     \item \textbf{Diagramas UML}
-    \begin{itemize}
-        \item \textbf{Diagrama de Casos de Uso}
-        \begin{center}
-    \includegraphics[width=\linewidth]{figuras/UseCase_TCC-1.png}
-    \captionof{figure}{Diagrama de caso de uso Fonte: Autores}
 
-    \label{fig:nome-da-imagem}
+       \item \textbf{Diagrama de Casos de Uso}
+       
+O diagrama do Math Pow App ilustra uma aplicação educacional gamificada com funcionalidades distribuídas em quatro áreas principais: autenticação (registro, login, recuperação de senha e logout), gestão de cursos (visualização, seleção e início de sessão), mecânicas de gameplay (responder questões, progresso, sistema de estrelas e vidas) e gerenciamento de perfil. A interação ocorre entre dois atores principais - o Usuário e o Sistema - demonstrando uma estrutura centrada no usuário com elementos de gamificação para incentivar o aprendizado e engajamento.
+
+       
+        \begin{center}
+    \includegraphics[width=\linewidth]{figuras/DiagramsUMLs/Math Pow Use Case.png}
+    \captionof{figure}{Diagrama de caso de uso Fonte: Autoral da equipe}
 \end{center}
-        \item \textbf{Diagrama de Classes}
-        \item \textbf{Diagrama de Atividades}
-    \end{itemize}
-\end{itemize}
+
+\item \textbf{Diagrama de Classes}
+
+O diagrama de classes do Math Pow App mostra uma estrutura com quatro classes fundamentais: Session (gerenciamento de sessões de estudo com contadores de respostas e estado), Course (modelo de cursos com atributos básicos), Firebase (integração com serviços Firebase para autenticação e banco de dados) e User (representação do usuário). O diagrama utiliza padrões visuais claros com fundo branco e bordas em tons de cinza, demonstrando uma arquitetura orientada a objetos com separação clara de responsabilidades entre gestão de sessões, conteúdo educacional e infraestrutura de backend.
+
+\begin{center}
+\includegraphics[width=0.3\linewidth]{figuras/DiagramsUMLs/Math Pow App.png}
+\captionof{figure}{Diagrama de Classes Fonte: Autoral da equipe}
+\label{fig:diagrama-de-classes}
+\end{center}
+
+\item \textbf{Diagrama de Atividades}
+
+O diagrama de atividades ilustra o fluxo de feedback e recompensas do Math Pow App. Começando com a exibição do resultado de uma atividade, o sistema verifica o sucesso: em caso positivo, atualiza o progresso e concede estrelas como recompensa; em caso negativo, oferece a opção de nova tentativa. O fluxo também inclui verificação de autenticação, redirecionando para a tela de login caso necessário. Este diagrama representa uma estrutura de decisão simples e efetiva para gamificação educacional, com foco em feedback imediato e persistência do usuário.
+
+\begin{center}
+\includegraphics[width=\linewidth]{figuras/DiagramsUMLs/Math Pow Activity.png}
+\captionof{figure}{Diagrama de Atividades Fonte: Autoral da equipe}
+\label{fig:diagrama-de-atividades}
+\end{center}
+
+\item \textbf{Diagrama de Sequência}
+
+O diagrama de sequência do Math Pow App ilustra a interação entre o usuário e os diferentes componentes do sistema durante o processo de autenticação e sessão de estudo. O fluxo começa com o usuário inserindo credenciais na LoginScreen, que interage com AuthStore e Firebase para validação. Após autenticação bem-sucedida, o usuário é redirecionado para CourseScreen, onde pode selecionar um curso, iniciando uma sessão na SessionScreen que apresenta questões para interação. O diagrama utiliza uma estrutura clara com atores e participantes bem definidos, demonstrando o fluxo de comunicação e respostas entre as diferentes camadas da aplicação.
+
+\begin{center}
+\includegraphics[width=\linewidth]{figuras/DiagramsUMLs/Math Pow Sequence.png}
+\captionof{figure}{Diagrama de Sequência Fonte: Autoral da equipe}
+\label{fig:diagrama-de-sequencia}
+\end{center}
 
 \section{Ferramentas e Tecnologias}
 
@@ -689,7 +731,7 @@ Na presente seção, serão detalhadas as diversas ferramentas e tecnologias emp
 
     \item \textbf{React Native} 
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/React Native.png}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/React Native.png}
     \captionof{figure}{Logo do framework React Native}
     \label{fig:React Native}
     Fonte para o React Native\footnote{\url{https://reactnative.dev/}}
@@ -705,7 +747,7 @@ Sobre as versões utilizadas o projeto demonstra o desenvolvimento de um app Rea
 
     \item \textbf{Docusaurus} 
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/Docusaurus.jpg}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/Docusaurus.jpg}
     \captionof{figure}{Logo do framework Docusaurus}
     \label{fig:Docusaurus}
     Fonte para o Docusaurus\footnote{\url{https://docusaurus.io/}}
@@ -719,7 +761,7 @@ Suporta internacionalização nativa, permitindo a criação e manutenção de d
     
     \item \textbf{Expo}
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/Expo Framework.jpeg}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/Expo Framework.jpeg}
     \captionof{figure}{Logo do framework Expo}
     \label{fig:Expo}
     Fonte para o Expo Framework\footnote{\url{https://expo.dev/}}
@@ -729,7 +771,7 @@ O Expo é uma plataforma para simplificar o desenvolvimento de aplicativos móve
 
     \item \textbf{Firebase}
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/Firebase.png}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/Firebase.png}
     \captionof{figure}{Logo do Firebase}
     \label{fig:Firebase}
     Fonte para o Firebase\footnote{\url{https://firebase.google.com/}}
@@ -742,7 +784,7 @@ O Firebase fornece uma excelente plataforma de backend como serviço (BaaS) para
 
     \item \textbf{TypeScript}
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/TypeScript.png}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/TypeScript.png}
     \captionof{figure}{Logo do TypeScript}
     \label{fig:TypeScript}
     Fonte para a documentação do TypeScript\footnote{\url{https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html}}
@@ -771,16 +813,20 @@ Por que TypeScript?
 
     \item \textbf{Astah UML}
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/Astah UML.png}
-    \captionof{figure}{logo da ferramenta para criação de UMLs AstahUML }
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/plantUML.jpeg}
+    \captionof{figure}{logo da ferramenta para criação de UMLs PlantUML }
     \label{fig:Astah UML}
-    Fonte para o AstahUML\footnote{\url{https://astah.net/products/astah-uml/}}
+    Fonte para o plantUML\footnote{\url{https://plantuml.com/}}
 \end{center}
 
-O Astah UML é uma ferramenta de modelagem UML (Unified Modeling Language) que oferece recursos abrangentes para profissionais de software, analistas de sistemas e outros envolvidos no desenvolvimento de software. Ele suporta todos os principais diagramas da UML, incluindo diagramas de classe, sequência, atividade, estado, e muito mais. Isso permite que os usuários visualizem e documentem diferentes aspectos de um sistema.
+PlantUML é uma ferramenta que permite a criação de diagramas UML utilizando uma linguagem de descrição textual. A principal vantagem do PlantUML é a simplicidade e a rapidez com que diagramas podem ser gerados a partir de um texto simples, sem a necessidade de ferramentas gráficas complexas. PlantUML suporta uma ampla variedade de diagramas UML, incluindo diagramas de classes, sequências, casos de uso, atividades, componentes, estados, entre outros.
+
+PlantUML utiliza uma linguagem de marcação própria para descrever os elementos e relacionamentos dos diagramas. A partir desse texto, a ferramenta gera automaticamente os diagramas correspondentes. A sintaxe é intuitiva e fácil de aprender, permitindo que desenvolvedores e engenheiros de software criem diagramas de forma rápida e eficiente.
+
+
     \item \textbf{Figma}
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{figuras/Figma.png}
+    \includegraphics[width=0.5\linewidth]{figuras/Tecnologies/Figma.png}
     \captionof{figure}{logo da ferramenta de Design Figma}
     \label{fig:Figma}
     Fonte para o Figma Fonte\footnote{\url{https://www.figma.com/}}
